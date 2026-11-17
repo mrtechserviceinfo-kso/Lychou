@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Lychou, mon amour</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,500;1,9..144,800&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="fx"></canvas>
+    <button id="music" aria-label="Activer la musique" title="Musique">♪</button>
+
+    <section id="hero" aria-label="Accueil">
+        <canvas id="gl"></canvas>
+        <div class="hero-txt">
+            <h1>Lychou</h1>
+            <p>Un petit monde rien que pour toi, mon Bb. Touche l’écran.</p>
+        </div>
+        <a class="down" href="#temps" aria-label="Descendre">↓</a>
+    </section>
+
+    <section id="temps">
+        <h2>Chaque seconde avec toi compte</h2>
+        <p class="sub">Choisis la date où notre histoire a commencé et regarde le temps d’amour s’écouler.</p>
+        <label for="since" class="hint">Date de notre début</label><br>
+        <input type="date" id="since">
+        <div class="clock" id="clock" aria-live="off"></div>
+    </section>
+
+    <section id="galerie">
+        <h2>Mes plus beaux souvenirs</h2>
+        <p class="sub">Fais tourner le manège avec ton doigt ou ta souris. Touche une photo pour l’agrandir.</p>
+        <div class="stage" id="stage">
+            <div class="ring" id="ring">
+                <figure><img src="assets/photo1.jpg" alt="Lychou avec une couronne et des ballons"></figure>
+                <figure><img src="assets/photo2.jpg" alt="Lychou souriante, la main sous le menton"></figure>
+                <figure><img src="assets/photo3.jpg" alt="Lychou avec des oreilles de chat"></figure>
+                <figure><img src="assets/photo4.jpg" alt="Lychou en t-shirt turquoise"></figure>
+                <figure><img src="assets/photo5.jpg" alt="Lychou au centre commercial"></figure>
+            </div>
+        </div>
+    </section>
+
+    <section id="video">
+        <h2>Un moment rien qu’à nous</h2>
+        <p class="sub">Bouge ta souris dessus, elle s’incline comme un petit écran magique.</p>
+        <div class="tilt" id="tilt">
+            <div class="tilt-in"><video src="assets/video.mp4" controls playsinline preload="metadata"></video></div>
+        </div>
+    </section>
+
+    <section id="raisons">
+        <h2>Pourquoi je t’aime</h2>
+        <p class="sub">Retourne chaque carte, il y a un secret derrière.</p>
+        <div class="cards" id="cards"></div>
+    </section>
+
+    <section id="lettre">
+        <h2>Une lettre pour toi</h2>
+        <button class="envelope" id="open">Ouvrir ma lettre ✉</button>
+        <div id="letter" aria-live="polite"></div>
+    </section>
+
+    <section id="question">
+        <h2>Une dernière question</h2>
+        <div class="ask" id="ask">
+            <button class="envelope" id="yes">Oui, je t’aime aussi ♥</button>
+            <button id="no">Non</button>
+        </div>
+        <div id="yes-msg">Je t’aime Lychou,<br>pour toujours ♥</div>
+    </section>
+    <footer>Fait avec tout mon cœur, rien que pour toi OthnielDev.</footer>
+    <div id="lb" role="dialog" aria-label="Photo agrandie"><img alt=""></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
